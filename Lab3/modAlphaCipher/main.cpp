@@ -70,7 +70,7 @@ SUITE(DecryptText)
     }
 }
 
-int main(int argc, char **argv)
+int main()
 {
     // Устанавливаем локаль для корректной работы iswalpha и towupper с кириллицей
     setlocale(LC_ALL, ""); 

@@ -12,11 +12,12 @@ tableCipher::tableCipher(const std::string& skey)
 // Валидация ключа: не пустой, только буквы, длина >= 2.
 std::string tableCipher::getValidKey(const std::string& s)
 {
-    if (s.empty())
+    if (s.empty()){
         throw cipher_error("Empty key");
-    if (s.size() < 2)
+    }
+    if (s.size() < 2){
         throw cipher_error("Key too small"); // Длина ключа = число столбцов
-
+    }
         std::string tmp(s);
     for (auto& c : tmp) {
         if (!isalpha(static_cast<unsigned char>(c)))
